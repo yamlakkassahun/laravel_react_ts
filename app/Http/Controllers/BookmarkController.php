@@ -26,8 +26,25 @@ class BookmarkController extends Controller
             'link' => ['required'],
         ]);
 
-        $data = OpenGraph::fetch($postData['link']);
+        $data = OpenGraph::fetch($postData['link'], true);
 
-        return $data;
+
+        $bookmark = Bookmark::create([
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'type' => $data['type'] || '',
+            'url' => $postData['link'],
+            'image_url' => $data['image'],
+            'user_id' => Auth::user()->id,
+        ]);
+
+        return redirect()->route('bookmark.view', ['bookmark' => $bookmark->id]);
+    }
+
+    public function view(Bookmark $bookmark){
+        if(Auth::user()->id != $bookmark->user_id) {
+            abort(401, 'You are not allowed to view this bookmark');
+        }
+        return Inertia::render('Bookmark/View/index', ['bookmarks' => $bookmark]);
     }
 }

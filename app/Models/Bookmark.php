@@ -17,5 +17,9 @@ class Bookmark extends Model
         'title',
         'user_id',
         'url',
+        'description',
+        'type',
+        'image_url',
+        'image_secure_url'
     ];
 }

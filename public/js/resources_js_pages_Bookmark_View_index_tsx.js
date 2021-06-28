@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_Bookmark_List_index_tsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_Bookmark_View_index_tsx"],{
 
 /***/ "./resources/js/components/commen/layouts/index.tsx":
 /*!**********************************************************!*\
@@ -34,9 +34,9 @@ exports.default = Layout;
 
 /***/ }),
 
-/***/ "./resources/js/pages/Bookmark/List/index.tsx":
+/***/ "./resources/js/pages/Bookmark/View/index.tsx":
 /*!****************************************************!*\
-  !*** ./resources/js/pages/Bookmark/List/index.tsx ***!
+  !*** ./resources/js/pages/Bookmark/View/index.tsx ***!
   \****************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -57,23 +57,26 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var layouts_1 = __importDefault(__webpack_require__(/*! ../../../components/commen/layouts */ "./resources/js/components/commen/layouts/index.tsx"));
 
-var bookmarkListPage = function bookmarkListPage(_a) {
+var bookmarkViewPage = function bookmarkViewPage(_a) {
   var bookmarks = _a.bookmarks;
   return react_1["default"].createElement(layouts_1["default"], null, react_1["default"].createElement("div", {
     className: "row"
   }, react_1["default"].createElement("div", {
     className: "col-md-8"
-  }, react_1["default"].createElement("ul", {
-    className: "list-group"
-  }, bookmarks.length > 0 && bookmarks.map(function (bookmark, index) {
-    return react_1["default"].createElement("li", {
-      className: "list-group-item",
-      key: index
-    }, react_1["default"].createElement("p", null, "Title: ", bookmark.title));
-  })))));
+  }, bookmarks.title && react_1["default"].createElement("div", {
+    className: "card"
+  }, react_1["default"].createElement("div", {
+    className: "card-header"
+  }, bookmarks.title), react_1["default"].createElement("div", {
+    className: "card-body"
+  }, react_1["default"].createElement("p", null, bookmarks.description), react_1["default"].createElement("img", {
+    src: bookmarks.image_url,
+    alt: bookmarks.title,
+    className: "img-fluid"
+  }))))));
 };
 
-exports.default = bookmarkListPage;
+exports.default = bookmarkViewPage;
 
 /***/ })
 

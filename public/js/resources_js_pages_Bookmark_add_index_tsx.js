@@ -24,8 +24,10 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 var Layout = function Layout(_a) {
   var children = _a.children;
   return react_1["default"].createElement("div", {
+    className: "container-fluid"
+  }, react_1["default"].createElement("div", {
     className: "container"
-  }, children);
+  }, children));
 };
 
 exports.default = Layout;
