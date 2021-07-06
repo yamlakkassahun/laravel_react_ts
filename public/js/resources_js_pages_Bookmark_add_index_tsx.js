@@ -66,9 +66,9 @@ var Menu = function Menu() {
     className: "navbar navbar-expand-md navbar-light bg-white shadow-sm"
   }, react_1["default"].createElement("div", {
     className: "container"
-  }, react_1["default"].createElement("a", {
+  }, react_1["default"].createElement(inertia_react_1.InertiaLink, {
     className: "navbar-brand",
-    href: "{{ url('/') }}"
+    href: ziggy_js_1["default"]('home')
   }, "Bookmark"), react_1["default"].createElement("button", {
     className: "navbar-toggler",
     type: "button",

@@ -1,7 +1,10 @@
 import React from "react";
+import Layout from "../../components/commen/layouts";
 
 const homePage = () => {
-    return <p>welcome to the home page</p>
+    return  <Layout>
+      <p>welcome to the home page</p>
+      </Layout>
 }
 
 export default homePage;
