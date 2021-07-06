@@ -37337,6 +37337,22 @@ var map = {
 	"./Home/index.tsx": [
 		"./resources/js/pages/Home/index.tsx",
 		"resources_js_pages_Home_index_tsx"
+	],
+	"./Welcome": [
+		"./resources/js/pages/Welcome/index.tsx",
+		"resources_js_pages_Welcome_index_tsx"
+	],
+	"./Welcome/": [
+		"./resources/js/pages/Welcome/index.tsx",
+		"resources_js_pages_Welcome_index_tsx"
+	],
+	"./Welcome/index": [
+		"./resources/js/pages/Welcome/index.tsx",
+		"resources_js_pages_Welcome_index_tsx"
+	],
+	"./Welcome/index.tsx": [
+		"./resources/js/pages/Welcome/index.tsx",
+		"resources_js_pages_Welcome_index_tsx"
 	]
 };
 function webpackAsyncContext(req) {
@@ -37493,7 +37509,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_pages_Bookmark_Add_index_tsx":1,"resources_js_pages_Bookmark_List_index_tsx":1,"resources_js_pages_Bookmark_View_index_tsx":1,"resources_js_pages_Home_index_tsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_pages_Bookmark_Add_index_tsx":1,"resources_js_pages_Bookmark_List_index_tsx":1,"resources_js_pages_Bookmark_View_index_tsx":1,"resources_js_pages_Home_index_tsx":1,"resources_js_pages_Welcome_index_tsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
